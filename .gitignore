@@ -1,17 +1,8 @@
-*.pyc
-*.map
-*.dblite
-*.elf
-*.bin
-*.hex
-*.axf
-*.pdb
-*.idb
-*.ilk
-*.old
-build
-Debug
-*~
+# ==========================================
+# 编译输出与中间文件
+# ==========================================
+build/
+Debug/
 *.o
 *.obj
 *.out
@@ -20,18 +11,53 @@ Debug
 *.lib
 *.i
 *.d
-.DS_Stor*
-.config 3
-.config 4
-.config 5
+*.map
+*.elf
+*.bin
+*.hex
+*.axf
 *.uimg
-GPATH
-GRTAGS
-GTAGS
-.vscode
+
+# ==========================================
+# 调试与日志文件
+# ==========================================
+*.pdb
+*.idb
+*.ilk
 JLinkLog.txt
 JLinkSettings.ini
+
+# ==========================================
+# SCons 与 Python 构建缓存
+# ==========================================
+*.dblite
+*.pyc
+__pycache__/
+
+# ==========================================
+# RT-Thread 与自动生成文件
+# ==========================================
+*.old
+.config *
+rtconfig_preinc.h
+
+# ==========================================
+# IDE 本地配置 (VSCode, Keil, IAR, Eclipse)
+# ==========================================
+.vscode/
 DebugConfig/
 RTE/
 settings/
+.settings/
 *.uvguix*
+.cproject
+.project
+
+# ==========================================
+# 系统与编辑器缓存文件
+# ==========================================
+*~
+.DS_Stor*
+GPATH
+GRTAGS
+GTAGS
